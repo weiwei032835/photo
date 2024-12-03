@@ -1,0 +1,62 @@
+@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500&family=Noto+Serif+TC:wght@200;300;400;500;600;700;900&display=swap');
+
+body{ background:#333; }
+body *{font-size:15px; line-height:1.5; letter-spacing:1.4px; color:#ccc; font-weight:450; font-family:"Noto Sans TC","微軟正黑體",'Noto Serif TC',"sans-serif"; text-decoration:none;}
+
+/*預設連結狀態*/
+a:link, a:visited{ color:#ccc; text-decoration:none; transition:color .3s;}
+a:hover,a:active{ color:#FEAA00; }
+
+a *{ text-decoration:none;}
+
+a h1, a h2, a h3, a h4, a h5, a h6{ color:#C3A6A0; }
+a:hover h1, a:hover h2, a:hover h3, a:hover h4, a:hover h5, a:hover h6{ color:#FEAA00; }
+
+h1{ font-size:24px; }
+h2{ font-size:22px; }
+h3{ font-size:20px; }
+h4{ font-size:18px; }
+h5{ font-size:1.5rem; background:#ccc; color:#333; margin-bottom:20px; }
+p{ font-size:16px; }
+p.summary{font-size:16px; }
+a{ font-size:16px; }
+/*768px*/
+@media only screen and (max-width:768px){
+	html{ font-size:2vw;}
+	body *{ font-size:1rem;}
+	h1{ font-size:24px;}
+	h2{ font-size:1.8rem;}
+	h3{ font-size:1.4rem;}
+	p{font-size:1.2rem;}
+	a{ font-size:1.2rem;}
+}
+
+/*550px*/
+@media only screen and (max-width:550px){
+	html{ font-size:3vw;}
+}
+
+/*375px*/
+@media only screen and (max-width:375px){
+	h2{ font-size:1.8rem;}
+	p{ font-size:1.6rem;}
+	p.summary{ font-size:1.4rem;}
+}
+
+
+/*樣式歸零*/
+ol,ul{ list-style:none; }
+*[class^=btn]{ margin:0; padding:0; border:none; outline:none;} 
+
+a.more{}
+a.more:hover i{ color:#FEAA00; }
+
+
+/*goToTop*/
+button.goToTop{ width:44px; height:44px; background:rgba(0,0,0,.5); position:fixed; right:20px; bottom:-80px; z-index:500; 
+cursor:pointer; border:0px solid red; }
+button.goToTop::before{ content:""; display:block; width:20px; height:20px; border-top:2px solid #fff; border-left:2px solid #fff; 
+position:absolute; left:50%; top:50%; transform:translate(-50%,-20%) rotate(45deg); }
+button.goToTop.active{ bottom:20px; transition:.3s; }
+button.goToTop:hover{ background:rgba(0,0,0,1); }

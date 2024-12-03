@@ -1,0 +1,159 @@
+/* wrapper */
+.wrapper{ width:100%; max-width:1200px; margin:0 auto; border:0px solid yellow;}
+
+/*container =============*/
+.container{ padding:5px; border:0px solid navy; }
+
+/*header =============*/
+.header{   min-height:100px; margin-bottom:20px; background:#333; position:sticky; top:0; z-index:500; border-bottom:1px solid #ccc; 
+	display:flex; flex-wrap:wrap; align-items:center;  }
+
+/*768px*/
+@media only screen and (max-width:768px){ 
+.header{ padding-top: 12px;}
+}
+
+/* news header客製化 */
+body.news-page .header{ margin-bottom:20px; }
+body.editor .header{ margin-bottom:20px; }
+
+/*onTop =============*/
+.header.onTop{ min-height:65px; transition:300ms;}
+.header.onTop .part_search{ top:12px; }
+.header.onTop h2.logo_ettoday{ flex:0 240px; height:30px;  background-size:auto 30px; }
+
+
+/*768px*/
+@media only screen and (max-width:768px){
+	.header.onTop .part_search{ top:3px; }	
+}
+
+/*300px 修正*/
+@media only screen and (max-width:300px){ 
+	.header{ min-height: 84px; padding-top: 10px;}
+	.header.onTop h2.logo_ettoday{ flex:0 0 180px; height:30px; background-size:auto 22px; }
+	.header .part_search{ top:4px; }
+}
+
+/* logo_ettoday =============*/
+h2.logo_ettoday{ flex:0 0 400px; height:50px; background:url(../images/logo.png) no-repeat center center/ auto 50px; 
+	position:relative; margin-left:10px; transition:.3s; border:0px solid #ff0; }
+
+/*768px*/
+@media only screen and (max-width:768px){ 
+h2.logo_ettoday{ flex:0 0 320px; margin-bottom: 5px; background-size:auto 40px; }
+}
+
+
+/*375px 修正*/
+@media only screen and (max-width:375px){ 
+	.header{ min-height: 85px; padding-top: 10px;}
+	h2.logo_ettoday{ flex:0 0 240px; height:30px; background-size:auto 30px; }
+	.header .part_search{ top:7px;  }
+}
+
+/*320px 修正*/
+@media only screen and (max-width:320px){ 
+	.header{ min-height: 84px; padding-top: 10px;}
+	h2.logo_ettoday{ flex:0 0 240px; height:30px; background-size:auto 30px; }
+	.header .part_search{ top:5px; }
+	.part_search form .btn_open i,
+	.part_search form .btn_submit i{ font-size:16px;  }
+}
+
+/*300px 修正*/
+@media only screen and (max-width:300px){ 
+	.header{ min-height: 84px; padding-top: 10px;}
+	h2.logo_ettoday{ flex:0 0 180px; height:30px; background-size:auto 22px; }
+	.header .part_search{ top:4px; }
+}
+
+
+/*透明按鈕*/
+h2.logo_ettoday a{ display:block; width:100%; height:100%; text-indent:-9999px; background:rgba(0, 200, 0, 0); }
+
+/*nav =============*/
+.nav{ flex:1 1 auto; margin-right:60px; border:0px solid skyblue;
+	display:flex; flex-wrap:wrap; justify-content:flex-end; align-content:center;}
+
+/*768px*/
+@media only screen and (max-width:768px){ 
+.nav{ flex:1 1 100%;  margin-right:0px; justify-content:center; background:#555; }
+}
+
+.nav a{ padding:5px 10px; font-size:16px; }
+
+/* current */
+.nav a.current{ background-color:#666; color:#fff; }
+
+
+/*part_search=====*/
+.part_search{ width:40px; height:40px; position:absolute; right:5px; top:30px; transition:.3s; border:0px solid pink; }
+
+/*768px*/
+@media only screen and (max-width:768px){ 
+.part_search{ top:15px; }
+}
+
+.part_search form{ height:100%; position:relative; }
+.part_search form input{ display:block; width:calc(100% - 40px - 10px); height:100%; padding:0px 10px; color:#000; outline:none; border-radius:10px; 
+	border:0px solid purple;  font-size:18px; }
+.part_search form .btn_open,
+.part_search form .btn_submit{ display:block; width:40px; height:40px; position:absolute; right:0; top:0; cursor:pointer; }
+
+.part_search form .btn_open{ background-color: #333333; z-index:2; }
+.part_search form .btn_submit{ background-color: #333333; z-index:1; }
+
+.part_search form .btn_open i,
+.part_search form .btn_submit i{ background-color: #333333; color:#fff; font-size:22px; line-height:40px;  }
+
+
+/*搜尋 activeSearch js加到 body==========*/
+body.activeSearch .nav{ opacity:0;  }
+body.activeSearch .part_search{ width:300px;}
+body.activeSearch .part_search .btn_open{ display:none;}
+
+/*768px*/
+@media only screen and (max-width:768px){
+	body.activeSearch .part_search{ width:95%;}
+	body.activeSearch h2.logo_ettoday{opacity:0; }
+	body.activeSearch .nav{ opacity:1;  }
+}
+
+/*375px*/
+@media only screen and (max-width:375px){
+	.part_search {width:35px; height:35px; top:12px; }
+	.part_search form .btn_open i,
+	.part_search form .btn_submit i{ background-color: #333333; color:#fff; top:5px; font-size:20px; line-height:40px; }
+}
+
+/*footer =============*/
+.footer{ width:100%; max-width: 1200px; margin-bottom:30px; border:0px solid green; }
+/* menu_1 */
+.footer .menu_1{ margin-bottom:10px;}
+.footer .menu_1 ul{ width:80%; margin:0 auto; display:flex; flex-wrap:wrap; justify-content: center; align-content:flex-start;}
+.footer .menu_1 ul a{ font-size: 14px;font-weight: 300; }
+.footer .menu_1 ul li:nth-of-type(n+2)::before { content: '︱'; margin-right: 3px;}	
+/* menu_2 */
+.footer .menu_2{ }
+.footer .menu_2 ul{ }
+.footer .menu_2 ul li{ display:flex; flex-direction:column; justify-content:center; align-items:center; text-align: center;font-weight: 300;font-size: 14px; line-height: 2;}
+/* hover*/
+.footer .menu_1 ul li a:hover{ color:#666; transition: color .3s;}
+/*768px*/
+@media only screen and (max-width:768px){
+	.footer .menu_1 ul >li.info{display: none;}
+	.footer .menu_1 ul a{}
+	.footer .menu_1 ul li:nth-child(3)::before { display: none;}
+	.footer .menu_2 ul li:nth-child(2){ padding:10px;  }
+}
+
+
+
+
+
+
+
+
+
+

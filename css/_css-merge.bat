@@ -1,0 +1,1 @@
+copy noto.css + fontawesome\fontawesome-all.css + html5reset-1.6.1.css + global.css + layout.css + block.css + style.css
